@@ -1,0 +1,29 @@
+---
+   - name: installing lamp stack in ubuntu
+       hosts: ubuntu
+       become: yes
+       update_cache: yes
+       Tasks:
+         - name: installing apache2
+            apt:
+              name: apache2
+              state: present            
+         - name: installing apache2
+            apt:
+              name: php
+              state: present
+         - name: installing apache2
+            apt:
+              name: libapache2-mod-php
+              state: present
+         - name: installing apache2
+            apt:
+              name: php-mysql
+              state: present
+         - name: installing apache2
+            apt:
+              name: php-cli
+              state: present
+
+
+
